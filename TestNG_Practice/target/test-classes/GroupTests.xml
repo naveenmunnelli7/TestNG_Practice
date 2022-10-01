@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="Test1">
+		<groups>
+			<define name="dailyBuild">
+				<include name="sanity" />
+				<include name="regression" />
+			</define>
+			<define name="weeklyBuild">
+				<include name="sanity" />
+				<include name="regression" />
+				<include name="functional" />
+				<include name="smoke" />
+			</define>
+			<run>
+				<include name="weeklyBuild" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.naveen.groupTests.NewTest1" />
+			<class name="com.naveen.groupTests.NewTest2" />
+		</classes>
+	</test>
+</suite>

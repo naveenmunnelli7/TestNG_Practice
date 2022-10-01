@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test1(failed)">
+    <classes>
+      <class name="com.naveen.dependancyTests.TestGroupDependancy">
+        <methods>
+          <include name="test1"/>
+          <include name="test4"/>
+          <include name="test5"/>
+          <include name="test2"/>
+          <include name="test3"/>
+          <include name="test6"/>
+          <include name="test7"/>
+        </methods>
+      </class> <!-- com.naveen.dependancyTests.TestGroupDependancy -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

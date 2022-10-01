@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [DemoSuite]" guice-stage="DEVELOPMENT">
+  <parameter name="password" value="admin123"/>
+  <parameter name="browserName" value="Chrome"/>
+  <parameter name="sleepTime" value="3000"/>
+  <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+  <parameter name="username" value="Admin"/>
+  <test thread-count="5" name="OrangeHRMLogin(failed)">
+    <parameter name="browserName" value="Edge"/>
+    <classes>
+      <class name="com.naveen.test.OrangeHRM">
+        <methods>
+          <include name="InitiliseBrowser"/>
+          <include name="VerifyLogin"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- com.naveen.test.OrangeHRM -->
+    </classes>
+  </test> <!-- OrangeHRMLogin(failed) -->
+  <test thread-count="5" name="OrangeHRMMyInfo(failed)">
+    <classes>
+      <class name="com.naveen.test.OrangeHRM">
+        <methods>
+          <include name="InitiliseBrowser"/>
+          <include name="NavigateToMyInfo"/>
+          <include name="VerifyMyInfo"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- com.naveen.test.OrangeHRM -->
+    </classes>
+  </test> <!-- OrangeHRMMyInfo(failed) -->
+  <test thread-count="5" name="TestGoogle(failed)">
+    <classes>
+      <class name="com.naveen.test.FirstTest">
+        <methods>
+          <include name="TestGoogle"/>
+        </methods>
+      </class> <!-- com.naveen.test.FirstTest -->
+    </classes>
+  </test> <!-- TestGoogle(failed) -->
+</suite> <!-- Failed suite [DemoSuite] -->
